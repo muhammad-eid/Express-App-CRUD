@@ -1,0 +1,33 @@
+{{>header}}
+{{>navbar}}
+<section class=" mx-5">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#if AllUsers}}
+    {{#each AllUsers}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>
+        <a href="single/{{this.id}}" class="btn btn-primary">Show</a>
+        <a href="edit/{{this.id}}" class="btn btn-warning">Edit</a>
+        <a href="delete/{{this.id}}" class="btn btn-danger">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+    {{else}}
+    <tr>
+      <td colspan="4" >Empty</td>
+    </tr>
+    {{/if}}
+  </tbody>
+</table>
+</section>
+{{>footer}}

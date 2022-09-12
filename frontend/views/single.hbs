@@ -1,0 +1,27 @@
+{{>header}}
+{{>navbar}}
+<section class=" mx-5">
+{{#if user}}
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">email</th>
+        <th scope="col">age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.age}}</td>
+        </tr>
+    </tbody>
+</table>
+{{else}}
+<div>User Dosen't Exist</div>
+{{/if}}
+</section>
+{{>footer}}
